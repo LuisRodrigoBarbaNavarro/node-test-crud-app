@@ -1,0 +1,4 @@
+# Ignorar módulos
+node_modules/
+vendor/
+# Ignorar módulos
