@@ -1,34 +1,48 @@
-<!-- List Users Page -->
-<div class="container mt-5">
-    <h2>User List</h2>
-    <table class="table" id="users-table">
-        <thead>
-            <tr>
-                <th>ID</th>
-                <th>Name</th>
-                <th>Lastname</th>
-                <th>Username</th>
-                <th>Password</th>
-                <th>Email</th>
-                <th>Actions</th>
-            </tr>
-        </thead>
-        <tbody>
-            {{#each data}}
-            <tr>
-                <td>{{id}}</td>
-                <td>{{name}}</td>
-                <td>{{lastname}}</td>
-                <td>{{username}}</td>
-                <td>{{password}}</td>
-                <td>{{email}}</td>
-                <td>
-                    <a class="btn btn-primary btn-sm" href="edit/{{id}}">Edit</a>
-                    <a class="btn btn-danger btn-sm"  href="delete/{{id}}">Delete</a>
-                </td>
-            </tr>
-            {{/each}}
-        </tbody>
-    </table>
+<!-- List (Users) Page -->
+<div class="container-fluid" style="width: 88%;">
+    <div class="row">
+        <div class="col-6 col-md-6">
+            <h2 class="pb-3">List (Users) <i class="fa-solid fa-address-book"></i></h2>
+        </div>
+        <div class="col-6 col-md-6">
+            <a class="btn btn-primary float-end" href="/users/add">Add User</a>
+        </div>
+    </div>
+
+    <div class="container-fluid p-2 rounded-3 bg-light shadow">
+        <div class="container-fluid pt-3" style="overflow-x: scroll;">
+            <table class="table text-center" id="users-table">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Name</th>
+                        <th>Lastname</th>
+                        <th>Username</th>
+                        <th>Password</th>
+                        <th>Email</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {{#each data}}
+                    <tr>
+                        <td>{{id}}</td>
+                        <td>{{name}}</td>
+                        <td>{{lastname}}</td>
+                        <td>{{username}}</td>
+                        <td>{{password}}</td>
+                        <td>{{email}}</td>
+                        <td>
+                            <section class="text-center">
+                                <a class="btn btn-warning btn-sm" href="edit/{{id}}">Edit</a>
+                                <a class="btn btn-danger btn-sm m-1" href="delete/{{id}}">Delete</a>
+                            </section>
+                        </td>
+                    </tr>
+                    {{/each}}
+                </tbody>
+            </table>
+        </div>
+    </div>
 </div>
-<!-- List Users Page -->
+<!-- List (Users) Page -->

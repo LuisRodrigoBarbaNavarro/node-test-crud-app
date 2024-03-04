@@ -12,7 +12,7 @@
 
 <body>
     <header>
-        <nav class="navbar bg-primary navbar-expand-lg" data-bs-theme="dark">
+        <nav class="navbar bg-primary navbar-expand-lg shadow" data-bs-theme="dark">
             <div class="container-fluid">
                 <a class="navbar-brand" href="/"><i class="fa-solid fa-users"></i></a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
@@ -26,10 +26,10 @@
                             <a class="nav-link active" aria-current="page" href="/">Home</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="/users/list">Users</a>
+                            <a class="nav-link" href="/users/list">Users (List)</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="/users/add">Users (Add)</a>
+                            <b><a class="nav-link" href="/users/add">Users (Add)</a></b>
                         </li>
                     </ul>
                 </div>
@@ -37,16 +37,17 @@
         </nav>
     </header>
     <main>
-        <div class="container-fluid rounded-3 mt-3 text-center" style="width: 90%;">
+        <div class="container-fluid shadow pt-5 pb-5"
+            style="background-color: #78aeff; color: white;">
             {{{body}}}
         </div>
     </main>
     <footer>
-        <div class="container-fluid rounded-3 mt-3 text-center" style="width: 90%;">
-            2024 &copy; All rights reserved.
+        <div class="container-fluid shadow text-center p-1 w-100" style="background-color: #b2d1ff; color: white;">
+            2024 &copy; All rights reserved. Rodrigo Barba.
         </div>
     </footer>
-    
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
         crossorigin="anonymous"></script>
