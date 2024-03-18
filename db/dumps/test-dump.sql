@@ -67,7 +67,7 @@ CREATE DEFINER=`root`@`localhost` PROCEDURE `deleteUserByID`(
   IN id INT
 )
 BEGIN
-  DELETE FROM Users WHERE id = Users.id;
+  DELETE FROM users WHERE id = users.id;
 END ;;
 DELIMITER ;
 /*!50003 SET sql_mode              = @saved_sql_mode */ ;
@@ -88,7 +88,7 @@ CREATE DEFINER=`root`@`localhost` PROCEDURE `getUserByID`(
   IN id INT
 )
 BEGIN
-  SELECT * FROM Users WHERE id = Users.id;
+  SELECT * FROM users WHERE id = users.id;
 END ;;
 DELIMITER ;
 /*!50003 SET sql_mode              = @saved_sql_mode */ ;
@@ -113,14 +113,14 @@ CREATE DEFINER=`root`@`localhost` PROCEDURE `insertUser`(
   IN email VARCHAR(255)
 )
 BEGIN
-  INSERT INTO Users (name, lastname, username, password, email) VALUES (name, lastname, username, password, email);
+  INSERT INTO users (name, lastname, username, password, email) VALUES (name, lastname, username, password, email);
 END ;;
 DELIMITER ;
 /*!50003 SET sql_mode              = @saved_sql_mode */ ;
 /*!50003 SET character_set_client  = @saved_cs_client */ ;
 /*!50003 SET character_set_results = @saved_cs_results */ ;
 /*!50003 SET collation_connection  = @saved_col_connection */ ;
-/*!50003 DROP PROCEDURE IF EXISTS `listUsers` */;
+/*!50003 DROP PROCEDURE IF EXISTS `listusers` */;
 /*!50003 SET @saved_cs_client      = @@character_set_client */ ;
 /*!50003 SET @saved_cs_results     = @@character_set_results */ ;
 /*!50003 SET @saved_col_connection = @@collation_connection */ ;
@@ -130,9 +130,9 @@ DELIMITER ;
 /*!50003 SET @saved_sql_mode       = @@sql_mode */ ;
 /*!50003 SET sql_mode              = 'ONLY_FULL_GROUP_BY,STRICT_TRANS_TABLES,NO_ZERO_IN_DATE,NO_ZERO_DATE,ERROR_FOR_DIVISION_BY_ZERO,NO_ENGINE_SUBSTITUTION' */ ;
 DELIMITER ;;
-CREATE DEFINER=`root`@`localhost` PROCEDURE `listUsers`()
+CREATE DEFINER=`root`@`localhost` PROCEDURE `listusers`()
 BEGIN
-  SELECT * FROM Users;
+  SELECT * FROM users;
 END ;;
 DELIMITER ;
 /*!50003 SET sql_mode              = @saved_sql_mode */ ;
@@ -158,7 +158,7 @@ CREATE DEFINER=`root`@`localhost` PROCEDURE `updateUserByID`(
   IN email VARCHAR(255)
 )
 BEGIN
-  UPDATE Users SET name = name, lastname = lastname, username = username, password = password, email = email WHERE id = Users.id;
+  UPDATE users SET name = name, lastname = lastname, username = username, password = password, email = email WHERE id = users.id;
 END ;;
 DELIMITER ;
 /*!50003 SET sql_mode              = @saved_sql_mode */ ;

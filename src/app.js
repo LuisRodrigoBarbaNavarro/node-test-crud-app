@@ -10,7 +10,7 @@ const userRoutes = require('./routes/userRoutes');
 
 // Importar rutas.
 const app = express();
-app.set('port', 4000);
+app.set('port', 3000);
 // Importar rutas.
 
 // Configurar el middleware de procesamiento de cuerpo.
@@ -27,11 +27,11 @@ app.set('views', __dirname + '/views');
 
 // Configurar conexión a la base de datos.
 app.use(conexion(mysql, {
-    host: 'localhost',
+    host: 'mysql-container', // Nombre del contenedor MySQL
     user: 'root',
-    password: 'root',
-    port: 3306,
-    database: 'test'
+    password: 'root', // Contraseña del usuario root de MySQL
+    port: 3306, // Puerto por defecto de MySQL
+    database: 'test' // Nombre de la base de datos
 }, 'single'));
 // Configurar conexión a la base de datos.
 
